@@ -1,0 +1,21 @@
+@import './settings/index';
+@import "generic/index";
+@import "./base/index";
+
+
+@import "components/index";
+
+
+@import "externals/index";
+
+
+@import './tailwind.scss';
+
+
+.app{
+  &-card{
+    @include themify($themes) {
+      background: themed('colorText');
+    }
+  }
+}

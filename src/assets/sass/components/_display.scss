@@ -1,0 +1,29 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+
+.d-{
+  &-flex{
+    display: flex;
+  }
+}
+
+
+$alignItems: ('center','start','end');
+
+
+.app{
+  &-flex{
+    display: flex !important;
+  }
+
+  &-items{
+    @each $key, $value in $alignItems{
+      &-#{$key}{
+        align-items:#{$key} !important;
+      }
+    }
+  }
+}

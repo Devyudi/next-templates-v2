@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  stg:
+    env_file:
+      - .env
+    image: core_next:stg
+    restart: "always"
+    container_name: core-next-stg
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - npm-cache:/root/.npm
+    ports:
+      - "3501:3501"
+volumes:
+  npm-cache:
+    external: false

@@ -1,0 +1,25 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+body {
+  //@include themify($themes) {
+  //  background: themed('body') !important;
+  //}
+}
+
+header{
+  @include themify($themes){
+    background: themed('nav-hero') !important;
+  }
+}
+
+.dark{
+  body, h1,h2,h3,h4,h5,h6,div,p,span,a{
+    @include themify($themes){
+      color: themed('text') !important;
+      font-color: themed('text') !important;
+    }
+  }
+}

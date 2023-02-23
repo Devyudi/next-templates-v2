@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@moonlay/controllers": ["./src/lib/controllers"],
+      "@moonlay/services": ["./src/lib/services/index"],
+      "@moonlay/helpers":["./src/lib/helpers/index"],
+      "@moonlay/modules" : ["./src/lib/modules/index"],
+      "@moonlay/handlers": ["./src/lib/handler/index"],
+      "@moonlay/lib": ["./src/lib/index"],
+      "@moonlay/*": ["./*"]
+    }
+  }
+}

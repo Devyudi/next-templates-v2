@@ -1,0 +1,227 @@
+[
+  {
+    "id":1,
+    "slug": "product-air-jordan",
+    "name": "Product Air Jordan",
+    "price": 1000000,
+    "thumbnail": "/product/sepatu-air-jordan.png",
+    "images": [
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png"
+    ]
+  },
+  {
+    "id":2,
+    "slug": "sepatu-nike",
+    "name": "Sepatu Nike",
+    "price": 154000,
+    "thumbnail": "/product/sepatu-nike.png",
+    "images": [
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png"
+    ]
+  },
+  {
+    "id":3,
+    "slug": "sandal-jepit-swall-oh",
+    "name": "Sandal Jepit Swall Oh",
+    "price": 512000,
+    "thumbnail": "/product/sandal-jepit.jpg",
+    "images": [
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg"
+    ]
+  },
+  {
+    "id":4,
+    "slug": "baju-original-vinewoor",
+    "name": "Baju Original Vinewood",
+    "price": 612800,
+    "thumbnail": "/product/baju-wanita.jpg",
+    "images": [
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg"
+    ]
+  },
+  {
+    "id":5,
+    "slug": "dispenser-air-kolam-renang",
+    "name": "Dispenser Air Kolam Renang",
+    "price": 412000,
+    "thumbnail": "/product/dispenser.jpg",
+    "images": [
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg"
+    ]
+  },
+  {
+    "id":6,
+    "slug": "dispenser-air-kolam-renang",
+    "name": "Keyboard Mechanical",
+    "price": 992000,
+    "thumbnail": "/product/keyboard-1.png",
+    "images": [
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png"
+    ]
+  },
+  {
+    "id":7,
+    "slug": "product-air-jordan",
+    "name": "Product Air Jordan",
+    "price": 1000000,
+    "thumbnail": "/product/sepatu-air-jordan.png",
+    "images": [
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png",
+      "/product/sepatu-air-jordan.png"
+    ]
+  },
+  {
+    "id":8,
+    "slug": "sepatu-nike",
+    "name": "Sepatu Nike",
+    "price": 154000,
+    "thumbnail": "/product/sepatu-nike.png",
+    "images": [
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png",
+      "/product/sepatu-nike.png"
+    ]
+  },
+  {
+    "id":9,
+    "slug": "sandal-jepit-swall-oh",
+    "name": "Sandal Jepit Swall Oh",
+    "price": 512000,
+    "thumbnail": "/product/sandal-jepit.jpg",
+    "images": [
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg",
+      "/product/sandal-jepit.jpg"
+    ]
+  },
+  {
+    "id":10,
+    "slug": "baju-original-vinewoor",
+    "name": "Baju Original Vinewood",
+    "price": 612800,
+    "thumbnail": "/product/baju-wanita.jpg",
+    "images": [
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg",
+      "/product/baju-wanita.jpg"
+    ]
+  },
+  {
+    "id":11,
+    "slug": "dispenser-air-kolam-renang",
+    "name": "Dispenser Air Kolam Renang",
+    "price": 412000,
+    "thumbnail": "/product/dispenser.jpg",
+    "images": [
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg",
+      "/product/dispenser.jpg"
+    ]
+  },
+  {
+    "id":12,
+    "slug": "dispenser-air-kolam-renang",
+    "name": "Keyboard Mechanical",
+    "price": 992000,
+    "thumbnail": "/product/keyboard-1.png",
+    "images": [
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png",
+      "/product/keyboard-1.png"
+    ]
+  },
+  {
+    "id":13,
+    "slug": "macbook-pro-m2",
+    "name": "Macbook Pro M2 Apple Chip 2022",
+    "price": 992000,
+    "thumbnail": "/product/macbook-1.png",
+    "images": [
+      "/product/macbook-1.png",
+      "/product/macbook-2.png",
+      "/product/macbook-3.png",
+      "/product/macbook-4.png",
+      "/product/macbook-2.png",
+      "/product/macbook-3.png",
+      "/product/macbook-1.png"
+    ]
+  },
+  {
+    "id":13,
+    "slug": "macbook-pro-m2",
+    "name": "Macbook Pro M2 Apple Chip 2020",
+    "price": 992000,
+    "thumbnail": "/product/macbook-4.png",
+    "images": [
+      "/product/macbook-1.png",
+      "/product/macbook-2.png",
+      "/product/macbook-3.png",
+      "/product/macbook-4.png",
+      "/product/macbook-2.png",
+      "/product/macbook-3.png",
+      "/product/macbook-1.png"
+    ]
+  }
+
+]

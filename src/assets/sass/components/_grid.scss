@@ -1,0 +1,42 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+
+// grid container
+$items:12;
+.app {
+
+  &-grid {
+    display: inline-flex;
+    width: 100%;
+    flex-flow: wrap ;
+    margin-bottom: 1rem;
+
+    &.app{
+      &-gap{
+        @include gap-row-dynamic;
+        //@include gap-dynamic;
+        @for $i from 1 through $items{
+          &-#{$i}{
+            padding: #{0.25rem * $i};
+            width: calc(100% + #{1rem * $i}) !important;
+            margin: 0 -#{.5rem * $i} !important;
+            .app-grid--col{
+              padding:#{.25rem * $i} !important;
+            }
+          }
+
+        }
+      }
+    }
+
+        &--col {
+          //padding: .25rem;
+
+          //border:1px solid red;
+          @include grid-col;
+        }
+  }
+}

@@ -1,0 +1,407 @@
+//ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-light w-full border-0 css-dev-only-do-not-override-1n7nwfa
+
+%input-antd-placeholder {
+  &::-webkit-input-placeholder { /* Edge */
+    font-size: $font-size-sm !important;
+    letter-spacing: normal !important;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: $font-size-sm !important;
+    letter-spacing: normal !important;
+  }
+
+  &::placeholder {
+    font-size: $font-size-sm !important;
+    letter-spacing: normal !important;
+  }
+}
+%input-antd{
+  height:45px;
+  width: 100% !important;
+}
+
+.ant{
+
+  &-dropdown{
+    z-index: 99999;
+  }
+  &-menu{
+
+    @include themify($themes){
+
+      background-color: themed('nav-hero') !important;
+    }
+
+    //border-radius:52px ;
+    @include themify($themes){
+      color: themed('paragraf') !important;
+    }
+    &:hover{
+
+    }
+    &-title{
+      &:hover{
+        @include themify($themes){
+          color: lighten(themed('link'),10%) !important;
+        }
+      }
+      &-content{
+
+      }
+    }
+    &-root{
+
+    }
+
+    &-item{
+      &:hover{
+        @include themify($themes){
+          color: themed('paragraf') !important;
+        }
+      }
+      &-active{
+        &:hover{
+          @include themify($themes){
+            color: themed('link') !important;
+          }
+        }
+      }
+      &-selected{
+        @include themify($themes){
+          color: themed('link') !important;
+        }
+      }
+    }
+
+    &-horizontal{
+
+    }
+    &-light{
+      background-color: transparent !important;
+      @include themify($themes){
+        color: themed('paragraf') !important;
+      }
+    }
+
+    &-overflow{
+
+      &-item{
+
+      }
+    }
+
+
+    &-submenu{
+      &:hover{
+        @include themify($themes){
+          color: lighten(themed('link'),10%) !important;
+        }
+      }
+      &-open{
+        @include themify($themes){
+          background: themed('nav-hero') !important;
+        }
+
+      }
+
+      &-horizontal{
+
+      }
+
+      &-title{
+
+      }
+
+      &-active{
+        &:hover{
+          color: lighten(#0a53be, 60%) !important;
+        }
+      }
+    }
+  }
+
+
+  &-card{
+    @include themify($themes){
+      background:themed('card') !important;
+      border-bottom: 1px solid darken(themed('card'),10%) !important;
+    }
+
+
+    &-head{
+      border:0 !important;
+
+      &-title{
+        @include themify($themes){
+          color:themed('text') !important;
+        }
+      }
+    }
+    &-bordered{
+      @include themify($themes){
+        border: 1px solid darken(themed('card'),10%) !important;
+      }
+    }
+  }
+
+}
+
+
+/**
+ * Ant message
+ */
+.ant{
+  &-message{
+    z-index: 9999999;
+    top:20px !important;
+
+    &-success{
+    }
+    &-custom{
+      &-content{
+        @include themify($themes){
+          color: themed('text') !important;
+        }
+      }
+    }
+
+    &-notice{
+      &-content{
+        @include themify($themes) {
+          background: themed('popConfirm') !important;
+        }
+      }
+    }
+  }
+}
+
+
+%antd-card {
+  .ant {
+    &-card {
+      @include themify($themes) {
+        background: themed('card') !important;
+      }
+    }
+  }
+}
+
+.app{
+  &-navbar{
+    .ant{
+      &-menu{
+        z-index: 9999 !important;
+        &-submenu{
+
+          &-popup{
+            z-index: 99999999 !important;
+          }
+          &-open{
+            //border:1px solid blue !important;
+
+            z-index: 99999999 !important;
+          }
+
+          &-active{
+            //position:absolute !important;
+            //border:1px solid green !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Ant Layout
+ */
+.ant{
+  &-layout{
+    height:100vh ;
+
+    &-has{
+      &-sider{
+        height:calc(100vh - 61px) !important;
+      }
+    }
+
+    &-sider{
+
+    }
+    &:not(.ant-layout-has-sider){
+
+    }
+  }
+}
+
+
+/**
+ * Ant Form
+ */
+.ant{
+
+  &-input{
+    @extend %input-antd;
+    @extend %input-antd-placeholder;
+  }
+  &-form{
+    &-item{
+      &-control{
+        &-input{
+          width:100% !important;
+          &-content{
+            @extend %input-antd;
+            @extend %input-antd-placeholder;
+
+            input{
+              width:100% !important;
+              height:100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Ant Image Preview
+ */
+.ant{
+  &-image{
+    &-preview{
+      &-img{
+        object-fit: contain !important;
+        height: 100% !important;
+        width:100%;
+      }
+      &-operations{
+        &-wrapper{
+          background:rgba(33,103,219,0.53) !important;
+          z-index: 999999 !important;
+        }
+      }
+      &-root{
+
+
+      }
+      &-wrap{
+        z-index:10000 !important
+      }
+      &-mask{
+        z-index:9999 !important;
+      }
+      &-content{
+
+      }
+    }
+  }
+}
+
+
+
+.ant{
+  &-layout{
+    height: 100% !important;
+    overflow: hidden;
+
+    &-content{
+      height: 100% !important;
+    }
+
+
+    &-header{
+      position:fixed !important;
+      top:0;
+      left: 0;
+      width: 100% !important;
+      z-index: 1000;
+    }
+
+    &-has{
+      &-sider{
+
+        .ant{
+          &-layout{
+            &-sider{
+              position: fixed !important;
+              margin-top:65px !important;
+              height:100% !important;
+              overflow-y: auto !important;
+            }
+            &-content{
+              margin-left: 200px !important;
+              min-height:100vh !important;
+              margin-top:65px !important;
+              height:100% !important;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+/**
+ * Antd Selection
+ */
+.ant{
+  &-select{
+    &-in {
+      &-form{
+        &-item{
+
+        }
+      }
+    }
+    &-selection{
+      &-item{
+
+      }
+      &-search{
+        &-input{
+
+        }
+      }
+    }
+    &-selector{
+      height:auto !important;
+      padding:9px !important;
+    }
+  }
+}
+
+.ant{
+  &-layout{
+    &-content{
+
+      &.app{
+        &-content{
+          transition:.2s;
+          position: relative;
+          min-height: calc(100vh - 65px) !important;
+          &:before{
+            content: '';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 60px;
+            height: 60px !important;
+            background: white !important;
+            z-index: -1;
+          }
+
+          &-collapse{
+            transition:.2s;
+            margin-left:100px !important;
+          }
+        }
+      }
+    }
+  }
+}

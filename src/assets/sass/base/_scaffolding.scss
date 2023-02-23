@@ -1,0 +1,51 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+main {
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  cursor: default;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  //
+  @include themify($themes) {
+    color: themed('colorText');
+  }
+}
+
+* {
+  box-sizing: inherit;
+}
+
+ul, ol {
+  padding-left: 15px;
+  margin-bottom: 0;
+}
+
+a {
+  color: $color-blue;
+  transition: all 0.3s;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+
+  }
+}
+
+img {
+  width: 100%;
+}

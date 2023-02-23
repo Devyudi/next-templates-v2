@@ -1,0 +1,3 @@
+export const THEME_CHANGE_MODE = 'THEME_CHANGE_MODE'
+
+export const THEME_COLLAPSE = 'THEME_COLLAPSE'

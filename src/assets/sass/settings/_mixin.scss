@@ -1,0 +1,97 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@mixin event-odd{
+  &:nth-child(even) {
+    @include themify($themes) {
+      background: themed('event-odd') !important;
+    }
+  }
+
+  &:nth-child(odd) {
+    @include themify($themes) {
+      background: darken(themed('event-odd'),10%) !important;
+    }
+  }
+}
+
+
+@mixin row{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+}
+
+$breakpoints: (
+        xs: 320px,
+        sm: 480px,
+        md: 780px,
+        lg: 990px,
+        xl: 1280px
+);
+
+
+@mixin break($size){
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+@mixin grid-col{
+  @each $key, $value in $breakpoints {
+    @for $i from 1 through $items {
+      &.#{$key}\:span-#{$i} {
+        @if $i - 12 == 0{
+          flex: 0 0 100%;
+        } @else {
+          flex: 0 0 #{100% / ( $i - 12 )};
+        }
+
+        @include break($key) {
+          flex: 0 0 #{$i / $items * 100%};
+          @content
+        }
+      }
+    }
+  }
+}
+
+$items:12;
+@mixin gap-column-dynamic{
+  @for $i from 1 through $items{
+    &-#{$i}{
+      column-gap: #{0.25rem * $i};
+    }
+  }
+}
+@mixin gap-dynamic{
+
+  @for $i from 1 through $items{
+    &-#{$i}{
+      gap: #{0.25rem * ($i - $items)} !important;
+
+    }
+  }
+}
+@mixin gap-row-dynamic{
+  @for $i from 1 through $items{
+    &-#{$i}{
+      row-gap: #{0.2rem * $i};
+    }
+  }
+}

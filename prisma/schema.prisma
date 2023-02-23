@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int            @id @default(autoincrement())
+  username  String         @db.VarChar(100)
+  email     String         @unique @db.VarChar(255)
+  password  String         @db.VarChar(255)
+  createdAt DateTime?      @default(now()) @db.Timestamp(0)
+  updatedAt DateTime?      @default(now()) @db.Timestamp(0)
+  deletedAt DateTime?
+  salt      String         @db.VarChar(255)
+  authors   Posts_author[]
+
+  @@index([id], map: "index_user_id")
+}
+
+model Posts {
+  id        Int            @id @default(autoincrement())
+  title     String         @db.VarChar(255)
+  slug      String         @db.VarChar(255)
+  content   String         @db.LongText
+  createdAt DateTime       @default(now()) @db.Timestamp(0)
+  updatedAt DateTime       @default(now()) @db.Timestamp(0)
+  deletedAt DateTime?
+  authors   Posts_author[]
+  seo       Posts_seo[]
+
+  @@index([id], map: "index_post_id")
+}
+
+model Posts_author {
+  id       Int   @id @default(autoincrement())
+  postsId  Int
+  authorId Int
+  author   User  @relation(fields: [authorId], references: [id])
+  posts    Posts @relation(fields: [postsId], references: [id])
+
+  @@index([id], map: "index_post_author_id")
+  @@index([authorId], map: "Posts_author_authorId_fkey")
+  @@index([postsId], map: "Posts_author_postsId_fkey")
+}
+
+model Posts_seo {
+  id            Int     @id @default(autoincrement())
+  postsId       Int
+  hashId        String? @db.VarChar(10)
+  seo_slug      String  @db.VarChar(255)
+  original_url  String? @db.VarChar(255)
+  canonical_url String? @db.VarChar(255)
+  seo_keyword   String? @db.VarChar(255)
+  seo_title     String? @db.VarChar(255)
+  seo_summary   String? @db.VarChar(255)
+  seo_img_alt   String? @db.VarChar(255)
+  seo_content   String? @db.VarChar(255)
+  seo_status    Int     @default(0)
+  posts         Posts   @relation(fields: [postsId], references: [id])
+
+  @@index([id], map: "index_posts_seo_id")
+  @@index([postsId], map: "Posts_seo_postsId_fkey")
+}
+
+model product {
+  id          Int                @id @default(autoincrement())
+  name        String?
+  description String?            @db.LongText
+  price       BigInt?
+  createdAt   DateTime?          @default(now()) @db.Timestamp(0)
+  updatedAt   DateTime?          @default(now()) @db.Timestamp(0)
+  deletedAt   DateTime?
+  images      product_image[]
+  taxonomy    product_taxonomy[]
+}
+
+model product_image {
+  id           Int     @id @default(autoincrement())
+  productId    Int
+  fieldname    String? @db.VarChar(10)
+  originalname String?
+  encoding     String?
+  mimetype     String?
+  destination  String?
+  filename     String?
+  size         Int?
+  prefix       String?
+  product      product @relation(fields: [productId], references: [id])
+
+  @@index([id], map: "index_product_image_id")
+  @@index([productId], map: "product_image_productId_fkey")
+}
+
+model product_taxonomy {
+  id         Int      @id @default(autoincrement())
+  productId  Int
+  taxonomyId Int
+  product    product  @relation(fields: [productId], references: [id])
+  taxonomies taxonomy @relation(fields: [taxonomyId], references: [id])
+
+  @@index([productId], map: "product_taxonomy_productId_fkey")
+  @@index([taxonomyId], map: "product_taxonomy_taxonomyId_fkey")
+}
+
+model taxonomy {
+  id        Int                @id @default(autoincrement())
+  name      String?
+  parentId  Int?
+  createdAt DateTime           @default(now()) @db.Timestamp(0)
+  updatedAt DateTime?          @default(now()) @db.Timestamp(0)
+  deletedAt DateTime?
+  products  product_taxonomy[]
+}

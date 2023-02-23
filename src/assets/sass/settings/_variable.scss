@@ -1,0 +1,33 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+$themes: (
+        light: (
+                body: $color-body,
+                nav-hero: $color-nav-hero,
+                paragraf: darken(#fff,90%),
+                link: #1c3dee,
+                event-odd: $color-odd,
+                white:#fff,
+                card:#fff,
+                text:#2f2f2f,
+                popConfirm:#fff,
+        ),
+        dark:(
+                body: darken($color-body, 80%),
+                nav-hero: darken($color-nav-hero,70%),
+                paragraf: darken(#fff,10%),
+                link: darken(#5f76ec,10%),
+                event-odd: darken($color-odd,60%),
+                white: darken(#fff,20%),
+                text:lighten(#2f2f2f, 70%),
+                card:#2f2f2f,
+                popConfirm:darken(#fff,85%),
+        )
+);
+
+
+$card-radius:10px;
+$font-size-sm:13px;

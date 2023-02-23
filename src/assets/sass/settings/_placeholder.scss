@@ -1,0 +1,23 @@
+// @author Mochamad Yudi Sobari
+// @github https://github.com/mochamadyudi
+// @email yuyuid.id12@gmail.com
+// @contact +6285718851007
+
+%text-danger{
+  color:red;
+}
+
+%button{
+  padding:10px 16px;
+  border-radius:6px;
+  border: .5px solid darken(#fff,10%);
+  font-size: 12px !important;
+}
+
+%button-primary{
+  @extend %button;
+  border:1px solid $color-accent;
+}
+%button-danger{
+
+}
